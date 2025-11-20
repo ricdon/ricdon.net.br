@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFSP Votuporanga - Disciplinas 2025/1 - Prof. Ricardo</title>
+  <meta name="description" content="Página inicial das disciplinas e materiais de apoio do Prof. Dr. Ricardo César de Carvalho no IFSP Votuporanga.">
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+
+  <style>
+    :root {
+      --ifsp-green: #008643;
+      --ifsp-dark: #004225;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #f8fafb;
+    }
+
+    .navbar-brand img {
+      max-height: 48px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #ffffff 0%, #e5f7ed 100%);
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-photo {
+      max-width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.18);
+      object-fit: cover;
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: var(--ifsp-dark);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .discipline-card {
+      border-radius: 0.75rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .discipline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.12);
+    }
+
+    .discipline-code {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      color: #6c757d;
+      font-weight: 600;
+    }
+
+    .utilities-list a {
+      text-decoration: none;
+    }
+
+    .utilities-list .list-group-item {
+      cursor: pointer;
+    }
+
+    .phrase-box {
+      border-left: 4px solid var(--ifsp-green);
+      background-color: #ffffff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.75rem;
+      font-style: italic;
+      box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.04);
+      min-height: 80px;
+    }
+
+    .phrase-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: #6c757d;
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      background-color: #1d1f20;
+      color: #cfd4da;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .win10-image {
+      max-width: 200px;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-section {
+        text-align: center;
+      }
+      .hero-section .text-start {
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar / Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--ifsp-green);">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="imagens/logo_ifsp.jpg" alt="Logo IFSP Votuporanga" class="me-2">
+          <span class="fw-semibold">IFSP - Votuporanga</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#disciplinas">Disciplinas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#utilitarios">Utilitários</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#frase-do-dia">Frase do dia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://about.me/ricdon" target="_blank" rel="noopener">Sobre o professor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="inicio" class="flex-grow-1">
+    <!-- Hero / Apresentação -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <p class="mb-2 text-muted section-title">Professor</p>
+            <h1 class="h3 fw-bold mb-2">Prof. Dr. Ricardo César de Carvalho</h1>
+            <p class="mb-3 text-muted">
+              Aulas e conteúdos de apoio do IFSP – Campus Votuporanga, 
+              organizados em um ambiente simples, leve e responsivo.
+            </p>
+            <p class="mb-2 text-muted">
+              Período: <strong>2025/2</strong>
+            </p>
+            <p class="mb-3 text-muted">
+              Utilize o menu para acessar disciplinas, utilitários e materiais complementares.
+            </p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img
+              src="imagens/IMG_4350.jpg"
+              alt="Professor Ricardo em aula"
+              class="hero-photo"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disciplinas -->
+    <section id="disciplinas" class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <div>
+            <p class="section-title mb-1">Disciplinas 2025/1</p>
+            <h2 class="h4 fw-semibold mb-0">Salas virtuais e materiais</h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Disciplina 1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card discipline-card h-100">
+              <div class="card-body d-flex flex-column">
+                <p class="discipline-code mb-2">VTPIIHD</p>
+                <h3 class="h5 fw-semibold mb-2">Introdução à Informática e Hardware</h3>
+                <p class="card-text text-muted mb-3">
+                  Conteúdos, templates de apresentação, datas de avaliação e materiais de apoio
+                  para a disciplina de Introdução à Informática e Hardware.
+                </p>
+                <div class="mt-auto">
+                  <a href="vtpiihd.html" class="btn btn-success btn-sm">
+                    Abrir página da disciplina
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Espaço para futuras disciplinas -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card discipline-card h-100 border-dashed">
+              <div class="card-body d-flex flex-column">
+                <p class="discipline-code mb-2">Em breve</p>
+                <h3 class="h5 fw-semibold mb-2">Nova disciplina</h3>
+                <p class="card-text text-muted mb-3">
+                  Este espaço está pronto para receber outra disciplina do semestre.
+                  Basta duplicar este card no código e atualizar o nome, sigla e link.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Exemplo de datas de avaliação (mantido da sua página antiga) -->
+        <div class="mt-5">
+          <p class="section-title mb-1">Avaliações</p>
+          <h3 class="h5 fw-semibold mb-3">Cronograma – Introdução à Informática e Hardware</h3>
+          <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Bimestre</th>
+                  <th scope="col">Data da avaliação</th>
+                  <th scope="col">Observações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1º Bimestre</td>
+                  <td>02/04/2025</td>
+                  <td>Prova + atividades práticas de montagem e formatação.</td>
+                </tr>
+                <tr>
+                  <td>2º Bimestre</td>
+                  <td>A definir</td>
+                  <td>Reservado para conteúdos avançados de hardware e SO.</td>
+                </tr>
+                <tr>
+                  <td>3º Bimestre</td>
+                  <td>A definir</td>
+                  <td>Atividades práticas e estudo de casos.</td>
+                </tr>
+                <tr>
+                  <td>4º Bimestre</td>
+                  <td>A definir</td>
+                  <td>Fechamento do conteúdo e revisão.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Utilitários -->
+    <section id="utilitarios" class="py-5 bg-light">
+      <div class="container">
+        <p class="section-title mb-1">Ferramentas de apoio</p>
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <h2 class="h4 fw-semibold mb-0">Utilitários para as aulas</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <ul class="list-group utilities-list">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Medidor de Velocidade de Internet – SIMET</strong><br>
+                  <small class="text-muted">
+                    Ferramenta para testar a qualidade da conexão durante atividades online.
+                  </small>
+                </div>
+                <a href="medidor.html" class="btn btn-outline-success btn-sm ms-3">
+                  Abrir
+                </a>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Visualizador de Arquivos CAD</strong><br>
+                  <small class="text-muted">
+                    Serviço online para visualizar arquivos de projetos em CAD diretamente no navegador.
+                  </small>
+                </div>
+                <a href="https://sharecad.org/" target="_blank" rel="noopener" class="btn btn-outline-success btn-sm ms-3">
+                  Acessar
+                </a>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Apresentação Pecha Kucha</strong><br>
+                  <small class="text-muted">
+                    Modelo de apresentação 20x20 (20 slides × 20 segundos) para trabalhos orais dinâmicos.
+                  </small>
+                </div>
+                <a href="pechakucha.html" class="btn btn-outline-success btn-sm ms-3">
+                  Ver detalhes
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <img
+              src="imagens/win10.gif"
+              alt="Ilustração de computador"
+              class="img-fluid win10-image"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frase do dia -->
+    <section id="frase-do-dia" class="py-5">
+      <div class="container">
+        <p class="section-title mb-1">Motivação</p>
+        <h2 class="h4 fw-semibold mb-3">Frase do dia</h2>
+
+        <div class="phrase-box">
+          <div class="phrase-label">Gerada aleatoriamente</div>
+          <div id="frase-dia" class="mt-1">
+            Carregando frase...
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="py-3 mt-auto">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <div class="col-md-6">
+          <span class="d-block">
+            &copy; <span id="ano-atual"></span> IFSP – Campus Votuporanga.
+          </span>
+          <span class="d-block">
+            Página organizada pelo Prof. Dr. Ricardo César de Carvalho.
+          </span>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="https://about.me/ricdon" target="_blank" rel="noopener">
+            about.me/ricdon
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (bundle) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Script Frase do Dia + Ano dinâmico -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const frases = [
+        "A maioria das pessoas não planeja fracassar, fracassa por não planejar. (John L. Beckley)",
+        "Todos os caminhos estão errados quando você não sabe onde quer chegar. (Desconhecido)",
+        "As pessoas passam mais tempo justificando porque fracassaram do que lutando para vencer. (Adir Ceruti)",
+        "Nas grandes batalhas da vida, o primeiro passo para a vitória é o desejo de vencer. (Gandhi)",
+        "Muitos homens iniciaram uma nova era na sua vida a partir da leitura de um livro. (Henry Thoreau)",
+        "Ame o que você tem, antes que a vida lhe ensine a amar o que você tinha.",
+        "Ser você mesmo em um mundo que está constantemente tentando fazer de você outra coisa é a maior realização. (Ralph Waldo Emerson)",
+        "Para ter sucesso nesse mundo, é preciso ou ser louco ou ser sábio. (Barão de Montesquieu)",
+        "Sorte é o que acontece quando capacidade encontra-se com oportunidade. (Sêneca)",
+        "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada dificuldade. (Winston Churchill)"
+      ];
+
+      const fraseEl = document.getElementById("frase-dia");
+      if (fraseEl && frases.length > 0) {
+        const idx = Math.floor(Math.random() * frases.length);
+        fraseEl.textContent = frases[idx];
+      }
+
+      const anoEl = document.getElementById("ano-atual");
+      if (anoEl) {
+        anoEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

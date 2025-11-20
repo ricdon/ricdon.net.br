@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medidor de Velocidade de Internet – SIMET | IFSP Votuporanga</title>
+  <meta name="description" content="Página de acesso ao medidor de velocidade de Internet SIMET para uso em aulas e atividades do IFSP Votuporanga.">
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+
+  <style>
+    :root {
+      --ifsp-green: #008643;
+      --ifsp-dark: #004225;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #f8fafb;
+    }
+
+    .navbar-brand img {
+      max-height: 48px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #ffffff 0%, #e5f7ed 100%);
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.18);
+      object-fit: contain;
+      background: #ffffff;
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: var(--ifsp-dark);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .info-card {
+      border-radius: 0.75rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0.4rem 1.4rem rgba(0, 0, 0, 0.06);
+    }
+
+    footer {
+      background-color: #1d1f20;
+      color: #cfd4da;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-section {
+        text-align: center;
+      }
+      .hero-section .text-start {
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar / Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--ifsp-green);">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="imagens/logo_ifsp.jpg" alt="Logo IFSP Votuporanga" class="me-2">
+          <span class="fw-semibold">IFSP - Votuporanga</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#disciplinas">Disciplinas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#utilitarios">Utilitários</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">SIMET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://about.me/ricdon" target="_blank" rel="noopener">Sobre o professor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="flex-grow-1">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <p class="mb-2 text-muted section-title">Utilitário</p>
+            <h1 class="h3 fw-bold mb-2">Medidor de Velocidade de Internet – SIMET</h1>
+            <p class="mb-3 text-muted">
+              O <strong>SIMET</strong> é um medidor de velocidade de Internet completo que verifica, além da banda de download,
+              diversas métricas de qualidade que afetam diretamente a navegação e o uso da rede em atividades acadêmicas
+              e do dia a dia.
+            </p>
+            <p class="mb-0 text-muted">
+              Use esta página para realizar testes de conexão durante as aulas, atividades remotas ou diagnósticos
+              rápidos em laboratório e em casa.
+            </p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img
+              src="imagens/internet.gif"
+              alt="Ilustração de Internet"
+              class="hero-image"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Widget SIMET -->
+    <section class="py-5">
+      <div class="container">
+        <p class="section-title mb-1">Teste de conexão</p>
+        <h2 class="h4 fw-semibold mb-3">Execute o teste agora</h2>
+
+        <div class="card info-card border-0 mb-4">
+          <div class="card-body">
+            <p class="text-muted mb-3">
+              Clique em <strong>Iniciar teste</strong> no widget abaixo para medir a qualidade da sua conexão.
+              O SIMET é fornecido pelo <strong>NIC.br</strong> e pode ser utilizado sem instalação de software extra.
+            </p>
+
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://beta.simet.nic.br/widget.html"
+                title="Medidor de Velocidade de Internet SIMET"
+                style="border:none;"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orientações -->
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card info-card border-0 h-100">
+              <div class="card-body">
+                <h3 class="h6 fw-semibold mb-2">Dicas para um resultado confiável</h3>
+                <p class="text-muted mb-2">
+                  Para que o SIMET possa obter <strong>resultados válidos</strong>, é recomendado:
+                </p>
+                <ul class="text-muted mb-0">
+                  <li>Evitar o uso de outras aplicações ou serviços (mesmo em outros dispositivos) que utilizem a Internet simultaneamente.</li>
+                  <li>Fechar downloads, streaming de vídeo, jogos online e atualizações durante o teste.</li>
+                  <li>Se estiver utilizando Wi-Fi, manter o dispositivo fisicamente próximo ao roteador ou modem.</li>
+                  <li>Se possível, conectar por cabo de rede (Ethernet) para obter uma medição mais estável.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card info-card border-0 h-100">
+              <div class="card-body">
+                <h3 class="h6 fw-semibold mb-2">Sugestões de uso em aula</h3>
+                <ul class="text-muted mb-2">
+                  <li>Comparar resultados entre diferentes laboratórios ou salas.</li>
+                  <li>Discutir conceitos de <strong>latência, jitter, perda de pacotes</strong> e banda.</li>
+                  <li>Relacionar a qualidade da Internet com atividades como videochamadas, jogos e streaming.</li>
+                  <li>Registrar os resultados em planilhas para análise em grupo.</li>
+                </ul>
+                <p class="text-muted mb-0">
+                  Esses testes podem compor atividades práticas de disciplinas relacionadas a redes, infraestrutura,
+                  suporte técnico e introdução à informática.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="index.html" class="btn btn-outline-secondary btn-sm">
+            ← Voltar para a página inicial
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="py-3 mt-auto">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <div class="col-md-6">
+          <span class="d-block">
+            &copy; <span id="ano-atual"></span> IFSP – Campus Votuporanga.
+          </span>
+          <span class="d-block">
+            Página organizada pelo Prof. Dr. Ricardo César de Carvalho.
+          </span>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="https://about.me/ricdon" target="_blank" rel="noopener">
+            about.me/ricdon
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (bundle) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Script Ano dinâmico -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const anoEl = document.getElementById("ano-atual");
+      if (anoEl) {
+        anoEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
