@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<!-- ============================================================
+     ÁREA DO ALUNO — IFSP
+     Para adicionar/remover materiais, NÃO edite este arquivo:
+     edite apenas dados/materiais.js (dá para fazer direto pelo
+     GitHub, no navegador). As tabelas abaixo são geradas
+     automaticamente a partir daquele arquivo.
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFSP · Área do aluno — Prof. Ricardo | Votuporanga</title>
+  <meta name="description" content="Materiais de disciplinas e utilitários para os alunos do Prof. Dr. Ricardo César de Carvalho — IFSP Campus Votuporanga.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-inner">
+      <a class="marca" href="index.html">
+        <img src="imagens/logo_ifsp.png" alt="Logo IFSP Votuporanga">
+        <span>ricdon.net.br</span>
+      </a>
+
+      <button class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#" aria-current="page">IFSP · Área do aluno</a></li>
+        <li><a href="#utilitarios">Utilitários</a></li>
+        <li><button class="btn-tema" id="btn-tema" aria-label="Alternar tema">☾</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Cabeçalho da área do aluno -->
+    <section class="hero">
+      <div class="container">
+        <p class="rotulo">IFSP · Campus Votuporanga</p>
+        <h1>Área do aluno</h1>
+        <p class="texto-suave" style="max-width: 680px;">
+          Materiais de apoio das disciplinas do Prof. Dr. Ricardo César
+          de Carvalho: templates, arquivos de atividades e recursos de
+          uso geral, organizados por disciplina.
+        </p>
+      </div>
+    </section>
+
+    <!-- Materiais (gerado por dados/materiais.js) -->
+    <section class="secao" id="materiais">
+      <div class="container">
+        <p class="rotulo">Materiais</p>
+        <h2>Arquivos por disciplina</h2>
+
+        <!-- As tabelas são montadas aqui pelo script -->
+        <div id="area-materiais" style="margin-top: 1.2rem;">
+          <p class="texto-suave">Carregando materiais…</p>
+        </div>
+
+        <noscript>
+          <p class="texto-suave">
+            Esta lista precisa de JavaScript habilitado. Os arquivos
+            também estão disponíveis diretamente nas pastas
+            <a href="PDF/">PDF/</a> e <a href="abnt/">abnt/</a> do site.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Utilitários -->
+    <section class="secao secao-alt" id="utilitarios">
+      <div class="container">
+        <p class="rotulo">Ferramentas de apoio</p>
+        <h2>Utilitários para as aulas</h2>
+
+        <ul class="lista-util" style="margin-top: 1.2rem;">
+          <li>
+            <div>
+              <strong>Medidor de velocidade de internet — SIMET</strong><br>
+              <span class="texto-suave">Teste a qualidade da conexão durante atividades online.</span>
+            </div>
+            <a class="btn btn-contorno" href="medidor.html">Abrir</a>
+          </li>
+          <li>
+            <div>
+              <strong>Visualizador de arquivos CAD</strong><br>
+              <span class="texto-suave">Visualize projetos em CAD diretamente no navegador, sem instalar nada.</span>
+            </div>
+            <a class="btn btn-contorno" href="https://sharecad.org/" target="_blank" rel="noopener">Acessar</a>
+          </li>
+          <li>
+            <div>
+              <strong>Apresentação Pecha Kucha</strong><br>
+              <span class="texto-suave">Modelo 20×20 (20 slides × 20 segundos) para trabalhos orais dinâmicos.</span>
+            </div>
+            <a class="btn btn-contorno" href="pechakucha.html">Ver detalhes</a>
+          </li>
+        </ul>
+
+        <p style="margin-top: 1.4rem;">
+          <a class="btn btn-neutro" href="index.html">← Voltar para a página inicial</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        © <span id="ano-atual"></span> Prof. Dr. Ricardo César de Carvalho.<br>
+        IFSP – Campus Votuporanga · <a href="https://vtp.ifsp.edu.br" target="_blank" rel="noopener">vtp.ifsp.edu.br</a>
+      </div>
+      <div>
+        <a href="index.html">Início</a> ·
+        <a href="https://about.me/ricdon" target="_blank" rel="noopener">about.me/ricdon</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dados/materiais.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Monta as tabelas de materiais a partir de dados/materiais.js,
+       agrupando pelo campo "disciplina". */
+    document.addEventListener("DOMContentLoaded", function () {
+      const area = document.getElementById("area-materiais");
+      if (!area) return;
+
+      if (typeof MATERIAIS === "undefined" || !Array.isArray(MATERIAIS) || MATERIAIS.length === 0) {
+        area.innerHTML = "<p class='texto-suave'>Nenhum material cadastrado no momento. " +
+          "Volte em breve ou verifique os avisos no canal da turma.</p>";
+        return;
+      }
+
+      // Agrupa por disciplina, preservando a ordem do arquivo
+      const grupos = new Map();
+      for (const m of MATERIAIS) {
+        const chave = (m.disciplina || "Outros").trim();
+        if (!grupos.has(chave)) grupos.set(chave, []);
+        grupos.get(chave).push(m);
+      }
+
+      area.innerHTML = "";
+      for (const [disciplina, itens] of grupos) {
+        const bloco = document.createElement("div");
+        bloco.style.marginBottom = "2.2rem";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = disciplina;
+        bloco.appendChild(titulo);
+
+        const wrap = document.createElement("div");
+        wrap.className = "tabela-wrap";
+
+        const tabela = document.createElement("table");
+        tabela.className = "tabela";
+        tabela.innerHTML =
+          "<thead><tr>" +
+          "<th scope='col'>Material</th>" +
+          "<th scope='col' style='width:1%; white-space:nowrap;'>Arquivo</th>" +
+          "</tr></thead>";
+
+        const corpo = document.createElement("tbody");
+        for (const item of itens) {
+          const tr = document.createElement("tr");
+
+          const tdDesc = document.createElement("td");
+          tdDesc.textContent = item.descricao || "";
+          tr.appendChild(tdDesc);
+
+          const tdLink = document.createElement("td");
+          const a = document.createElement("a");
+          a.className = "btn btn-contorno";
+          a.href = item.link || "#";
+          a.textContent = item.rotulo || "Baixar";
+          if (/^https?:\/\//i.test(item.link || "")) {
+            a.target = "_blank";
+            a.rel = "noopener";
+            if (!item.rotulo) a.textContent = "Abrir";
+          }
+          tdLink.appendChild(a);
+          tr.appendChild(tdLink);
+
+          corpo.appendChild(tr);
+        }
+        tabela.appendChild(corpo);
+        wrap.appendChild(tabela);
+        bloco.appendChild(wrap);
+        area.appendChild(bloco);
+      }
+    });
+  </script>
+</body>
+</html>
